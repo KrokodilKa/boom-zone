@@ -1,0 +1,37 @@
+<svg
+        id="alignTL"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 40 40">
+    <defs>
+        <style>.gold{fill:none;stroke: #f7c873; stroke-width: 2;}</style>
+    </defs>
+    <g>
+        <path
+            class="gold"
+            d="
+                M
+                1 39
+                1 1
+                39 1
+            "
+        />
+        <path
+            class="gold"
+            d="
+                M
+                8 33
+                8 8
+                33 8
+            "
+        />
+        <path
+            class="gold"
+            d="
+                M
+                15 29
+                15 15
+                29 15
+            "
+        />
+    </g>
+</svg>
