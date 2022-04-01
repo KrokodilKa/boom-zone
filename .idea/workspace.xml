@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1c021173-b849-4ef5-845a-da3a83cc8ed1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sizers/sizerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sizers/sizerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sizers/sizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sizers/sizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +74,7 @@
       <workItem from="1648652289436" duration="8010000" />
       <workItem from="1648665151288" duration="12998000" />
       <workItem from="1648755374129" duration="7895000" />
-      <workItem from="1648767660836" duration="6093000" />
+      <workItem from="1648767660836" duration="6931000" />
     </task>
     <servers />
   </component>
