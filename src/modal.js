@@ -14,7 +14,6 @@ export default (props) => {
 
         const element = document.querySelector("section");
         // element.style.width = 100 + 'px'
-        console.log(element.style.left)
     },[])
 
     return(
@@ -25,7 +24,7 @@ export default (props) => {
                 position: "fixed",
                 width: "500px",
                 height: "500px",
-                left: "50px"
+                transform: "translate(10px, 10px)"
             }}
         >
             <div
