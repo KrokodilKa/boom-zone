@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App';
-import Modal from "./modal"
+import ModalController from "./modalController"
 
 
 
@@ -9,7 +9,7 @@ const App = () => {
 
     return(
         <>
-            <Modal/>
+            <ModalController/>
         </>
     )
 }

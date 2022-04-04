@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import TextureIcon from '@mui/icons-material/Texture';
 
 export default (props) => {
+//Тупой компонент иконки, вешающий на себя слушатели при рендере и удаляющий их за собой.
 
     const sizer = useRef(null);
 
@@ -17,6 +18,8 @@ export default (props) => {
     }, []);
     function stopResize() {
         window.removeEventListener('mousemove', props.resize)
+        window.removeEventListener('mousemove', props.resize)
+        window.removeEventListener('mouseup', stopResize)
     }
 
     return(

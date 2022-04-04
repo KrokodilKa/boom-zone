@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
+import React, { useRef, useEffect, useState } from 'react';
 import SizerController from "./sizers/sizerController"
 import Mover from "./mover"
 
@@ -8,19 +7,15 @@ function onClickResizer (e) {
 }
 
 export default (props) => {
-    const re = useRef();
 
-    useEffect(() => {
-        console.log(re)
-
-        const element = document.querySelector("section");
-        // element.style.width = 100 + 'px'
-    },[])
+    console.log("locale modal render")
 
     return(
         <section
-            id="dad"
-            ref={re}
+            id={`dad${props.name}`}
+            onMouseDown={() => {
+                props.changeFokus(props.name)
+            }}
             style={{
                 position: "fixed",
                 width: "500px",
@@ -28,6 +23,7 @@ export default (props) => {
                 transform: "translate(10px, 10px)",
                 "min-width": "100px",
                 "min-height": "100px",
+                "z-index": props.name === props.current ? "100" : "1",
             }}
         >
             <div
@@ -35,18 +31,14 @@ export default (props) => {
                     width: "100%",
                     height: "100%",
                     "background-color": "#1d2025",
-                    border: "#101217 2px solid",
+                    border: props.name === props.current ? "#f7c873 2px solid" : "#101217 2px solid",
                     "border-radius": "5px",
-                    // "box-sizing": "border-box",
-                    // padding:
                 }}
             >
-                <Mover
-                >
-                    <CancelPresentationIcon sx={{color:"#f7c873", cursor:"pointer", "margin-left":"50px"}}/>
-                </Mover>
+                <Mover name={props.name}/>
+                {props.content}
             </div>
-            <SizerController/>
+            <SizerController name={props.name}/>
         </section>
     )
 }

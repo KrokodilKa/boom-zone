@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 export default (props) => {
+
+    //Меняет значение трансформа у модалки при движении мышью
 
     const sizer = useRef(null);
 
@@ -16,7 +19,7 @@ export default (props) => {
     }, []);
 
     function resize (e) {
-        const dadObject = document.getElementById("dad");
+        const dadObject = document.getElementById(`dad${props.name}`);
 
         let dadLeft = dadObject.style.transform.split(/px/)[0].replace(/\D/g,'');
         let dadTop = dadObject.style.transform.split(/px/)[1].replace(/\D/g,'');
@@ -35,7 +38,12 @@ export default (props) => {
                 width: "100%",
                 height: "40px",
                 "background-color": "#101217",
-                cursor: "pointer"
-            }}/>
+                cursor: "pointer",
+                color: "white",
+                "box-sizing": "border-box",
+                padding: "0 20px"
+            }}>{props.name}</article>
     )
 }
+// Кнопка удаления
+// <CancelPresentationIcon sx={{color:"#f7c873", cursor:"pointer"}}/>
