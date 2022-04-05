@@ -6,15 +6,15 @@ import Button from '@mui/material/Button';
 export default (props) => {
 
     const [modalList, setModalList] = useState([
-        {id: 0, content: "aaaa0"},
-        {id: 2, content: "bbbb2"},
-        {id: 15, content: "cccc15"},
-        {id: 3, content: "dddd3"},
-        {id: 4, content: "eeee4"},
-        {id: 5, content: "ffff5"},
-        {id: 6, content: "ggggg6"},
-        {id: 7, content: "hhhh7"},
-        {id: 8, content: "iiii8"}])
+        {id: 0, content: "aaaa0", isRender: false,},
+        {id: 2, content: "bbbb2", isRender: false,},
+        {id: 15, content: "cccc15", isRender: false,},
+        {id: 3, content: "dddd3", isRender: false,},
+        {id: 4, content: "eeee4", isRender: false,},
+        {id: 5, content: "ffff5", isRender: false,},
+        {id: 6, content: "ggggg6", isRender: false,},
+        {id: 7, content: "hhhh7", isRender: false,},
+        {id: 8, content: "iiii8", isRender: false,}])
     const [currentModal, setCurrentModal] = useState()
 
     const create = () => {
@@ -83,6 +83,13 @@ export default (props) => {
     //Эта функция срабатывает при опускании кнопки мыши на любую модалку
     const changeFokus = (index) => {
         setCurrentModal(index)
+        let list = modalList
+        list[currentModal].isReady = false
+        list[index].isRender = true
+        console.log(index)
+        console.log(list)
+        setModalList(list)
+
     }
 
     useEffect(() => {
@@ -98,9 +105,10 @@ export default (props) => {
             {
                 modalList.map(function (e, i) {
                     return <Modal
+                        key={e.id}
+                        isRender={e.isRender}
                         changeFokus={changeFokus}
                         name={e.id}
-                        current={currentModal}
                         content={e.content}
                     />
                 })

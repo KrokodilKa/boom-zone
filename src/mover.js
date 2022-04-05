@@ -37,10 +37,10 @@ export default (props) => {
             style={{
                 width: "100%",
                 height: "40px",
-                "background-color": "#101217",
+                backgroundColor: "#101217",
                 cursor: "pointer",
                 color: "white",
-                "box-sizing": "border-box",
+                boxSizing: "border-box",
                 padding: "0 20px"
             }}>{props.name}</article>
     )

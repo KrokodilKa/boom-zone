@@ -6,9 +6,10 @@ function onClickResizer (e) {
     console.log(e)
 }
 
-export default (props) => {
+export default React.memo((props) => {
 
     console.log("locale modal render")
+    console.log(props)
 
     return(
         <section
@@ -21,18 +22,18 @@ export default (props) => {
                 width: "500px",
                 height: "500px",
                 transform: "translate(10px, 10px)",
-                "min-width": "100px",
-                "min-height": "100px",
-                "z-index": props.name === props.current ? "100" : "1",
+                minWidth: "100px",
+                minHeight: "100px",
+                zIndex: props.isRender ? "100" : "1",
             }}
         >
             <div
                 style={{
                     width: "100%",
                     height: "100%",
-                    "background-color": "#1d2025",
-                    border: props.name === props.current ? "#f7c873 2px solid" : "#101217 2px solid",
-                    "border-radius": "5px",
+                    backgroundColor: "#1d2025",
+                    border: props.isRender ? "#f7c873 2px solid" : "#101217 2px solid",
+                    borderRadius: "5px",
                 }}
             >
                 <Mover name={props.name}/>
@@ -41,4 +42,4 @@ export default (props) => {
             <SizerController name={props.name}/>
         </section>
     )
-}
+})
